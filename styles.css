@@ -23,6 +23,7 @@ html,body {
 
 #top{
     position: absolute;
+    pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,7 +38,6 @@ html,body {
     height: 100vh;
     max-width: 1920px;
     background-color: rgb(0, 0, 0);
-    border: 1px solid red;
 }
 
 #nav{
@@ -45,6 +45,7 @@ html,body {
     justify-content: space-between;
     width: 100%;
     padding: 40px 0;
+    pointer-events: all;
 }
 
 #nav img{
@@ -67,24 +68,62 @@ html,body {
 }
 #hero{
     position: absolute;
-    top: 50%;
+    top: 37%;
     left: 0;
     transform: translate(0% , -50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 100px;
-    background-color: red;
 }
 
 #nheroleft{
     min-width: 50%;
     height: 100px;
-    background-color: yellow;
+    /* overflow: hidden; */
+}
+#nheroleft .elem{
+    height: 5vw;
+    overflow: hidden;
+}
+#nheroleft .elem h1{
+    line-height: 0.9;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 100;
+    font-size: 6vw;
+}
+#nheroleft button {
+    pointer-events: all;
+    cursor: pointer;
+    padding: .6vw 2vw;
+    font-size: 2.3vw;
+    margin-top: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+#nheroright{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    width: 18%;
+    height: 61vh;
+    color: white;
+}
+#nheroright p{
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
 }
 
-#nheroright{
-    min-width: 25%;
-    height: 100px;
-    background-color: rgb(47, 255, 0);
+#nheroright #imagediv{
+    width: 100%;
+    height: 120px !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBvcnRyYWl0fGVufDB8fDB8fHww);
+    background-size: cover;
+    background-position: center;
+}
+#nheroright p:nth-child(3){
+    margin-bottom: 60px;
 }
